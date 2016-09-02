@@ -59,7 +59,7 @@ approach 2 :
  	for(var i =0; i<len-1; i++) {
  		if(binarySearch(A, i+1, len-1, x-A[i])) {
 
- 			return [A[i], x-A[i]];
+ 			return 1;
  		}
  	}
 
@@ -67,4 +67,39 @@ approach 2 :
  }
 
 
-console.log(findNumbers_1([1, 4, 45, 6, 10, -8], 16));
+var findNumbers_2 = function(A, x) {
+	var len = A.length;
+
+    /* Sort the elements */
+    A.sort(function (a,b) {
+    	return a-b;
+    });
+
+    
+     
+    /* Now look for the two candidates in the sorted 
+       array*/
+    var l = 0;
+    var r = len-1; 
+    while (l < r)
+    {
+         if(A[l] + A[r] == x)
+              return 1; 
+         else if(A[l] + A[r] < x)
+              l++;
+         else // A[i] + A[j] > x
+              r--;
+    }    
+    return 0;
+
+}
+console.log("result with approach 1 : "+findNumbers_1([1, 4, 45, 6, 10, -8], 16));
+
+console.log("result with approach 2 :"+findNumbers_2([1, 4, 45, 6, 10, -8], 16));
+
+
+
+
+
+
+
