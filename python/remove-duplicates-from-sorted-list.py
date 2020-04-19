@@ -1,5 +1,5 @@
 # https://www.interviewbit.com/problems/remove-duplicates-from-sorted-list/
-from algo.LinkedList import LinkedList,Node
+from python.LinkedList import LinkedList
 
 class Solution:
     # @param A : head node of linked list

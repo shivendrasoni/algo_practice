@@ -1,6 +1,6 @@
 # https://www.interviewbit.com/problems/remove-duplicates-from-sorted-list-ii/
 
-from algo.LinkedList import LinkedList,Node
+from python.LinkedList import LinkedList
 
 class Solution:
     def deleteDuplicates(self, A):

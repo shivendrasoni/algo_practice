@@ -5,6 +5,12 @@ class Node:
         self.next = next
         self.prev = prev
 
+    def __str__(self):
+        return str(self.val)
+
+    def __repr__(self):
+        return self.__str__()
+
 
 class LinkedList:
     data_list = None
@@ -33,6 +39,18 @@ class LinkedList:
 
         self.head = ll[0]
         return ll[0]
+
+    def ll_to_list(self, head=None):
+        if head:
+            n = head
+        else:
+            n = self.head
+        a = []
+        while n:
+            a.append(n)
+            n = n.next
+
+        self.node_list = a
 
     def print_list(self, head=None):
         if head:

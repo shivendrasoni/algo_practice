@@ -1,5 +1,5 @@
 # https://www.interviewbit.com/problems/palindrome-list/
-from algo.LinkedList import LinkedList
+from python.LinkedList import LinkedList
 
 
 class Solution:
